@@ -1,9 +1,14 @@
 import React from 'react'
 import FaceExpressionDetector from './features/expression/components/FaceExpressionDetector'
+import { RouterProvider } from 'react-router'
+import { router } from './app.routes'
+import { AuthProvider } from './features/auth/auth.context'
 
 const App = () => {
   return (
-    <FaceExpressionDetector/>
+    <AuthProvider>
+        <RouterProvider router={router}/>
+    </AuthProvider>
   )
 }
 
