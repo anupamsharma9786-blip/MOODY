@@ -1,6 +1,8 @@
 const express = require('express')
 const cookieParser = require('cookie-parser')
 const cors = require("cors")
+const { applyTimestamps } = require('./models/userModel');
+
 
 const app = express();
 
@@ -12,8 +14,10 @@ app.use(cors({
 }))
 
 const authRouter = require('./routes/auth.routes');
-const { applyTimestamps } = require('./models/userModel');
+
+
 
 app.use("/api/auth", authRouter)
+
 
 module.exports = app
