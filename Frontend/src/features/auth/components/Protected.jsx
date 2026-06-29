@@ -1,34 +1,26 @@
 import React from 'react'
 import { useAuth } from '../hooks/useAuth'
-import { Navigate, useNavigate } from 'react-router'
-import { useEffect } from 'react'
-
+import { Navigate } from 'react-router'
+import '../styles/Loading.scss'
 
 const Protected = ({ children }) => {
-
-            useEffect(() => {
-            handleGetMe()
-        }, [])
-
-
-    const { user, loading, handleGetMe } = useAuth()
-
-
-
-    const navigate = useNavigate()
+    const { user, loading } = useAuth()
 
     if (loading) {
-
         return (
-            <h1>loading...</h1>
+            <main className="loading-shell">
+                <section className="loading-card">
+                    <div className="loading-spinner" aria-hidden="true" />
+                    <h2 className="loading-title">Checking your session</h2>
+                    <p className="loading-copy">Preparing your Moody experience...</p>
+                </section>
+            </main>
         )
     }
 
-    if (!user && !loading) {
-        return <Navigate to="/login" />
+    if (!user) {
+        return <Navigate to="/login" replace />
     }
-
-
 
     return children
 }

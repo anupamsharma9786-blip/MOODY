@@ -1,0 +1,122 @@
+.mood-page {
+  padding: 24px;
+}
+
+.mood-card {
+  width: min(1100px, 100%);
+  padding: 34px;
+}
+
+.mood-header {
+  margin-bottom: 28px;
+}
+
+.mood-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 12px;
+  padding: 8px 14px;
+  border-radius: 999px;
+  background: rgba(95, 168, 107, 0.16);
+  color: #b7f4ba;
+  font-size: 0.9rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.mood-grid {
+  display: grid;
+  grid-template-columns: 1.05fr 0.95fr;
+  gap: 20px;
+}
+
+.mood-panel {
+  background: linear-gradient(135deg, rgba(20, 42, 32, 0.98), rgba(12, 26, 20, 0.96));
+  border: 1px solid #2f4b3a;
+  border-radius: 24px;
+  padding: 22px;
+  box-shadow: inset 0 1px 0 rgba(255,255,255,0.03);
+}
+
+.mood-video {
+  width: 100%;
+  border-radius: 18px;
+  border: 2px solid #31503e;
+  background: #030806;
+  margin-bottom: 16px;
+  max-height: 370px;
+  object-fit: cover;
+}
+
+.mood-button {
+  width: 100%;
+  margin-bottom: 14px;
+}
+
+.status-stack {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.status-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 10px 14px;
+  border-radius: 999px;
+  background: rgba(255,255,255,0.04);
+  border: 1px solid #31503e;
+  color: #e6f7e8;
+  font-size: 0.94rem;
+}
+
+.status-pill.accent {
+  background: rgba(95, 168, 107, 0.16);
+  color: #b7f4ba;
+}
+
+.player-title {
+  margin-bottom: 10px;
+  color: #f3f6f2;
+  font-size: 1.2rem;
+}
+
+.player-copy {
+  margin-bottom: 16px;
+  color: #b2ccb8af;
+  line-height: 1.6;
+}
+
+.player-shell {
+  display: grid;
+  gap: 12px;
+}
+
+.player-select {
+  width: 100%;
+  border: 1px solid #31503e;
+  background: #142a20;
+  color: #e7f3e7;
+  border-radius: 14px;
+  padding: 12px 14px;
+  font-size: 1rem;
+}
+
+.player-frame {
+  border-radius: 16px;
+  border: 1px solid #31503e;
+  background: #030806;
+}
+
+@media (max-width: 860px) {
+  .mood-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .mood-card {
+    padding: 26px;
+  }
+}

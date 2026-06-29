@@ -15,10 +15,6 @@ export const router = createBrowserRouter([
     },
     {
         path:"/",
-        element:<Protected><h1>Home</h1></Protected>
+        element:<Protected><FaceExpressionDetector/></Protected>
     },
-    {
-        path:"/face",
-        element:<FaceExpressionDetector/>
-    }
 ])

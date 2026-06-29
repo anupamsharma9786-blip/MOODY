@@ -14,10 +14,12 @@ app.use(cors({
 }))
 
 const authRouter = require('./routes/auth.routes');
+const moodRouter = require('./routes/mood.routes');
 
 
 
 app.use("/api/auth", authRouter)
+app.use("/api/mood", moodRouter)
 
 
 module.exports = app
